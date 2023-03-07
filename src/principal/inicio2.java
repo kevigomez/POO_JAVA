@@ -8,9 +8,9 @@ public class inicio2 {
         persona2.mostrarPersona();
         double peso=persona2.calcularImc(heigth , wigth);{
             System.out.println("Ingrese su estatura M");
-        heigth=lectura.nextDouble();
-        System.out.println("Digite su peso en Kg");
-        weigth=lectura.nextDouble();
+            heigth=lectura.nextDouble();
+            System.out.println("Digite su peso en Kg");
+            weigth=lectura.nextDouble();
 
 
         }

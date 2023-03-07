@@ -23,8 +23,8 @@ public class Persona2 {
     System.out.println("datos de la persona, nombre: "+name+", tipo de documento: "+tipeDoc+", edad:"+age+", numero de documento:"+document+", estatura:"+heigth+", peso:"+weigth);  
     }
     public double calcularImc(double h double w){
-        heigth=h;
-        weigth=w;
+        heigth = h;
+        weigth = w;
         double pesoActual = Math.pow(heigth, 2);
         double pesoEstatura = pesoActual/weigth;
               if (pesoEstatura<20) {
@@ -42,6 +42,8 @@ public class Persona2 {
             System.out.println("error");
         }
         return peso;
+    }
+        public void mayoEdad(){
     if (age>=18) {
         System.out.println("mayor de edad");
     }
