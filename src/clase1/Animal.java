@@ -10,6 +10,13 @@ public class Animal {
     nombre=n;
     edad=e;
     }
+    public Animal(){
+
+    }
+    public Animal(String nombre, int edad){
+        this.nombre=nombre;
+        this.edad=edad;
+    }
     public void mostrarAnimal(){
     System.out.println("el nombre de el animal es "+nombre +"y la edad es "+edad);  
     }
@@ -17,5 +24,20 @@ public class Animal {
         int duplicado=edad*2;
         return duplicado ;
     }
+    public Animal(String nombre, String tipo){
+
+    }
+    public int getEdad(){
+        return edad;
+    }
+    public String getNombre(){
+        return nombre;
+    }
+    public void setEdad(int edad){
+        this.edad=edad;
+    }
+    public void setNombre(String nombre){
+        this.nombre=nombre;
+    }    
 
 }

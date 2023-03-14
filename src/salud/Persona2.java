@@ -2,9 +2,9 @@ package salud;
 import java.util.Scanner;
 
 public class Persona2 {
-    String tipeDoc, name ,lastName,sex;
-    int   document, age;
-    double weigth , heigth;
+    private String tipeDoc, name ,lastName,sex;
+    private int   document, age;
+    private double weigth , heigth;
     Scanner lectura =new Scanner(System.in);
     public void pedirDatos() {
     System.out.println("Ingrese el tipo de documento");
