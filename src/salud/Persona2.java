@@ -23,7 +23,7 @@ public class Persona2 {
     System.out.println("datos de la persona, nombre: "+name+", tipo de documento: "+tipeDoc+", edad:"+age+", numero de documento:"+document+", estatura:"+heigth+", peso:"+weigth);  
     }
     public double calcularImc(double h double w){
-        heigth = h;
+        h = heigth ;
         weigth = w;
         double pesoActual = Math.pow(heigth, 2);
         double pesoEstatura = pesoActual/weigth;
