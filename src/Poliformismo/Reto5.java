@@ -1,5 +1,5 @@
 package Poliformismo;
-package Poliformismo;
+
 import java.util.Scanner;
 public class Reto5 implements Juego{
     Scanner lectura=new Scanner(System.in);
