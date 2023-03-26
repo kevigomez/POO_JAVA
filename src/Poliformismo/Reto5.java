@@ -1,4 +1,5 @@
 package Poliformismo;
+package Poliformismo;
 import java.util.Scanner;
 public class Reto5 implements Juego{
     Scanner lectura=new Scanner(System.in);
@@ -13,13 +14,13 @@ public class Reto5 implements Juego{
 
     @Override
     public void jugar() {
-        int lanzamiento=(int)(Math.random()*3+1);
-        System.out.println(namePlayer+"seleccione 1 para piedra 2 para papel y 3 para tijera");
-        eleccion=lectura.nextLine();   
+        System.out.println(namePlayer+" seleccione  piedra, papel o tijera");
+        eleccion=lectura.next();   
     }
 
     @Override
     public void finalizar() {
+         lanzamiento=(int)(Math.random()*3+1);
           if (eleccion.equals("piedra") && lanzamiento == 1) {
         System.out.println("al escoger "+eleccion+" usted empato");
     }
