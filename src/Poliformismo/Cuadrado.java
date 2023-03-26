@@ -1,3 +1,4 @@
+package Poliformismo;
 import java.util.Scanner;
 
 public class Cuadrado  extends Figura{
