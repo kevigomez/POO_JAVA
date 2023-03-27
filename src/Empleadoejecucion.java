@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import Reto3.Empleado;
+import salud.Empleado;
 
 public class Empleadoejecucion {
     public static void main(String[] args) {
