@@ -1,5 +1,5 @@
 
-package Salud;
+package salud;
 import java.util.Scanner;
 public class Persona {
     private String tipeDoc,document,name,lastName,sex;
