@@ -1,54 +1,84 @@
 
-package salud;
+package Salud;
 import java.util.Scanner;
-
 public class Persona {
-    String tipeDoc, name ,lastName,sex;
-    int   document, age;
-    double weigth , heigth;
-    Scanner lectura =new Scanner(System.in);
+    private String tipeDoc,document,name,lastName,sex;
+    private double weigth,heigth ;
+    private int age;
+
+    public Persona(String string, String string2, String string3, String string4, int i, int j, int k, char c) {
+    }
+
+    public Persona(String tipeDoc, String document, String name, String lastName, double weigth , double heigth, int age, String sex) {
+        this.tipeDoc = tipeDoc;
+        this.document = document;
+        this.name = name;
+        this.lastName = lastName;
+        this.weigth  = weigth ;
+        this.heigth = heigth;
+        this.age = age;
+        this.sex = sex;
+    }
+
     public void pedirDatos() {
-    System.out.println("Ingrese el tipo de documento");
-    tipeDoc=lectura.nextLine();
-    System.out.println("Ingrese su nombre");
-    name=lectura.next();
-    System.out.println("Ingrese su edad ");
-    age=lectura.nextInt();
-    System.out.println("Ingrese su numero de documento ");
-    document=lectura.nextInt();
-    System.out.println("Ingrese su estatura M");
-    heigth=lectura.nextDouble();
-    System.out.println("Digite su peso en Kg");
-    weigth=lectura.nextDouble();
-    System.out.println("digite su sexo");
-    sex=lectura.next();
-    }
-    public void mostrarPersona(){
-    System.out.println("datos de la persona, nombre: "+name+", tipo de documento: "+tipeDoc+", edad:"+age+", numero de documento:"+document+", estatura:"+heigth+", peso:"+weigth);  
-    }
-    public void calcularImc(){
-        double pesoActual = Math.pow(heigth, 2);
-        double pesoEstatura = pesoActual/weigth;
-              if (pesoEstatura<20) {
-            System.out.println("esta por debajo peso ideal");
-        }
-        else if (pesoEstatura>=20 && pesoEstatura<=25) {
-            System.out.println("esta en el peso ideal");
-        }
-        else if (pesoEstatura>25) {
-            System.out.println("tiene sobrepeso");
-        }
-        else{
-            System.out.println("error");
-        }
-    if (age>=18) {
-        System.out.println("mayor de edad");
-    }
-    else if (age<=18) {
-        System.out.println("menor de edad");
-  }         
+        Scanner lectura = new Scanner(System.in);
 
+        System.out.print("Tipo de documento: ");
+        tipeDoc = lectura.nextLine();
+
+        System.out.print("documento: ");
+        document = lectura.nextLine();
+
+        System.out.print("Nombre: ");
+        name = lectura.nextLine();
+
+        System.out.print("Apellido: ");
+        lastName = lectura.nextLine();
+
+        System.out.print("peso  (en kg): ");
+        weigth  = lectura.nextDouble();
+
+        System.out.print("estatura (en m): ");
+        heigth = lectura.nextDouble();
+
+        System.out.print("Edad: ");
+        age = lectura.nextInt();
+
+        System.out.print("sex: ");
+        sex = lectura.next();
+        lectura.close();
 
     }
 
+    public void mostrarPersona() {
+        System.out.println("Tipo de documento: " + tipeDoc);
+        System.out.println("Documento: " + document);
+        System.out.println("Nombre: " + name);
+        System.out.println("Apellido: " + lastName);
+        System.out.println("Peso  (en kg): " + weigth );
+        System.out.println("Estatura (en m): " + heigth);
+        System.out.println("Edad: " + age);
+        System.out.println("sexo: " + sex);
+    }
+
+    public String calcularImc() {
+        double imc = this.weigth  / (this.heigth * this.heigth);
+    
+        if (imc < 20) {
+            return "PESOBAJO";
+        } else if (imc >= 20 && imc <= 25) {
+            return "PESOIDEAL";
+        } else {
+            return "SOBREPESO ";
+        }
+    }
+    
+
+    public void mayorEdad() {
+        if (age >= 18) {
+            System.out.println("Es mayor de edad.");
+        } else {
+            System.out.println("Es menor de edad.");
+        }
+    }
 }
