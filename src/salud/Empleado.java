@@ -1,4 +1,4 @@
-package Reto3;
+package salud;
 
 public class Empleado extends Persona2 {
     private String charge;
