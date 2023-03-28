@@ -5,7 +5,7 @@ import Salud.Persona;
 public class Inicio {
 
     public static void main(String[] args) {
-        Persona persona1 = new Persona("cc", "20455798", "Santiago", "Mesa", 0, 0, 0, 'm');
+        Persona persona1 = new Persona("cc", "20455798", "Kevin", "Gomez", 0, 0, 0, 'm');
         persona1.pedirDatos();
         persona1.mostrarPersona();
         String imcResultado = persona1.calcularImc();
